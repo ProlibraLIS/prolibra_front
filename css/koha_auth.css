@@ -70,444 +70,92 @@
     background: #393E46;
 }
 
-/* =========================
-   KOHA STAFF - MINIMAL ACADEMIC CLEAN THEME
-   For IntranetUserCSS
-   ========================= */
-
-:root{
-    --bg: #f7f8f5;
-    --surface: #ffffff;
-    --surface-soft: #fbfbf8;
-    --line: #dde3dc;
-    --line-soft: #e9eee8;
-    --text: #263238;
-    --text-soft: #5f6b66;
-    --accent: #2f6f5f;
-    --accent-soft: #edf5f2;
-    --hover: #f3f7f4;
-    --shadow: 0 1px 2px rgba(0,0,0,.04);
-    --radius: 8px;
-}
-
-/* Base */
-body,
-html {
-    background: var(--bg) !important;
-    color: var(--text);
-    font-family: "Segoe UI", Tahoma, Arial, sans-serif;
-    font-size: 14px;
-    line-height: 1.45;
-}
-
-/* Top navbar */
 .navbar.navbar-dark.bg-dark {
     background: #ffffff !important;
-    border-bottom: 1px solid var(--line);
-    box-shadow: none;
-}
-
-.navbar .navbar-brand,
-.navbar .nav-link,
-.navbar .dropdown-toggle {
-    color: var(--text) !important;
+    border-bottom: 1px solid #e5e7eb;
 }
 
 .navbar .nav-link {
+    color: #374151 !important;
     font-weight: 500;
 }
 
-.navbar .nav-link:hover,
-.navbar .nav-link:focus,
-.navbar .dropdown-item:hover {
-    color: var(--accent) !important;
-}
-
-.navbar .dropdown-menu {
-    border: 1px solid var(--line);
-    border-radius: var(--radius);
-    box-shadow: 0 6px 20px rgba(0,0,0,.06);
-}
-
-.navbar .dropdown-menu-dark {
-    background: #fff !important;
-}
-
-.navbar .dropdown-menu-dark .dropdown-item {
-    color: var(--text) !important;
+.navbar .nav-link:hover {
+    color: #2563eb !important;
 }
 
 #logo img {
-    height: 26px;
-    width: auto;
+    height: 28px;
 }
 
-/* Main layout */
-.main,
-#main,
+body {
+    background: #f5f7fb !important;
+}
+
 .container-fluid {
-    background: transparent !important;
+    padding-top: 16px;
 }
 
-#main .main.container-fluid,
-body:not(#main_auth) .container-fluid {
-    padding-top: 14px;
-    padding-bottom: 18px;
+#main, 
+.main, 
+.col-md-*, 
+.row > div {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 16px;
+    margin-bottom: 16px;
+    border: 1px solid #e5e7eb;
 }
 
-/* Generic content blocks */
-.panel,
-.dialog,
-.searchresults,
-#catalogue_detail_biblio,
-#patron-information,
-#circ_patronlists,
-fieldset.rows,
-fieldset.brief,
-fieldset.action,
-.table_controls,
-.statictabs,
-.tab-content,
-div.results,
-div#toolbar,
-div#yui-main,
-div.maincontainer,
-div.container-fluid > .row > div[class*="col-"] > div:not(.navbar):not(.dropdown-menu) {
-    border-radius: var(--radius);
+.table {
+    background: #ffffff;
+    border-radius: 10px;
+    overflow: hidden;
 }
 
-/* Page headings */
-h1, h2, h3, h4 {
-    color: #22302b;
+.table th {
+    background: #f9fafb;
     font-weight: 600;
-    letter-spacing: 0;
+    color: #374151;
+    border-bottom: 1px solid #e5e7eb;
 }
 
-h1 {
-    font-size: 1.45rem;
-    margin-bottom: 14px;
+.table td {
+    border-top: 1px solid #f1f5f9;
 }
 
-h2 {
-    font-size: 1.2rem;
+.table-hover tbody tr:hover {
+    background: #f3f6fb;
 }
 
-h3 {
-    font-size: 1.05rem;
+input, select, textarea {
+    border-radius: 8px !important;
+    border: 1px solid #d1d5db !important;
+    background: #fff;
 }
 
-/* Breadcrumbs */
-#breadcrumbs,
-.breadcrumb {
-    background: transparent !important;
-    border: 0 !important;
-    padding-left: 0;
-    padding-right: 0;
-    color: var(--text-soft);
-    font-size: 13px;
+input:focus, select:focus, textarea:focus {
+    border-color: #2563eb !important;
+    box-shadow: 0 0 0 2px rgba(37,99,235,0.1);
 }
 
-.breadcrumb a,
-#breadcrumbs a {
-    color: var(--accent);
-    text-decoration: none;
+.btn-primary {
+    background: #2563eb !important;
+    border: none !important;
+    border-radius: 8px;
 }
 
-/* Content panels */
-fieldset.rows,
-fieldset.brief,
-fieldset.action,
-.tab-content,
-.table_controls,
-.searchresults,
-.panel {
-    background: var(--surface);
-    border: 1px solid var(--line-soft);
-    box-shadow: var(--shadow);
+.btn-primary:hover {
+    background: #1d4ed8 !important;
 }
 
-/* Forms */
-label {
-    color: var(--text);
-    font-weight: 500;
+.btn {
+    border-radius: 8px;
 }
 
-input[type="text"],
-input[type="password"],
-input[type="email"],
-input[type="number"],
-input[type="search"],
-input[type="date"],
-select,
-textarea,
-.form-control {
-    background: #fff !important;
-    border: 1px solid #cfd8d3 !important;
-    border-radius: 6px !important;
-    color: var(--text) !important;
-    box-shadow: none !important;
-    transition: border-color .15s ease, box-shadow .15s ease, background .15s ease;
-}
-
-input[type="text"]:focus,
-input[type="password"]:focus,
-input[type="email"]:focus,
-input[type="number"]:focus,
-input[type="search"]:focus,
-input[type="date"]:focus,
-select:focus,
-textarea:focus,
-.form-control:focus {
-    border-color: var(--accent) !important;
-    box-shadow: 0 0 0 2px rgba(47,111,95,.08) !important;
-    background: #fff !important;
-}
-
-/* MARC editor / dense edit screens */
-#addbibliotabs,
-#editor,
-.subfield_line,
-.marc_editor,
-table.marc_editor {
-    background: var(--surface);
-}
-
-table.marc_editor td,
-table.marc_editor th {
-    border-color: var(--line-soft);
-}
-
-table.marc_editor input,
-table.marc_editor select,
-table.marc_editor textarea {
-    font-size: 13px;
-}
-
-/* Buttons */
-.btn,
-button,
-input[type="submit"],
-input[type="button"] {
-    border-radius: 6px !important;
-    box-shadow: none !important;
-    font-weight: 500;
-}
-
-.btn-primary,
-button.btn-primary,
-input.btn-primary {
-    background: var(--accent) !important;
-    border-color: var(--accent) !important;
-    color: #fff !important;
-}
-
-.btn-primary:hover,
-button.btn-primary:hover,
-input.btn-primary:hover {
-    background: #285e50 !important;
-    border-color: #285e50 !important;
-}
-
-.btn-default,
-.btn-secondary,
-.btn-outline-secondary {
-    background: #fff !important;
-    border: 1px solid #cfd8d3 !important;
-    color: var(--text) !important;
-}
-
-.btn-default:hover,
-.btn-secondary:hover,
-.btn-outline-secondary:hover {
-    background: var(--surface-soft) !important;
-}
-
-/* Tables */
-.table,
-table {
-    background: var(--surface);
-    color: var(--text);
-}
-
-.table th,
-table th {
-    background: #f3f5f1;
-    color: #2e3a35;
-    font-weight: 600;
-    border-bottom: 1px solid var(--line) !important;
-    border-top: 0 !important;
-}
-
-.table td,
-table td {
-    border-top: 1px solid var(--line-soft) !important;
-    vertical-align: middle;
-}
-
-.table-striped tbody tr:nth-of-type(odd),
-table.table-striped tbody tr:nth-of-type(odd) {
-    background: #fcfcfa;
-}
-
-.table-hover tbody tr:hover,
-table.table-hover tbody tr:hover {
-    background: var(--hover);
-}
-
-/* DataTables */
-.dataTables_wrapper .dataTables_filter input,
-.dataTables_wrapper .dataTables_length select {
-    margin-left: 4px;
-}
-
-.dataTables_wrapper .dataTables_paginate .paginate_button {
-    border-radius: 5px !important;
-    border: 1px solid transparent !important;
-}
-
-.dataTables_wrapper .dataTables_paginate .paginate_button.current {
-    background: var(--accent-soft) !important;
-    border-color: #d4e5de !important;
-    color: var(--accent) !important;
-}
-
-/* Tabs */
-.nav-tabs {
-    border-bottom: 1px solid var(--line);
-}
-
-.nav-tabs .nav-link {
-    color: var(--text-soft);
-    border-radius: 6px 6px 0 0;
-    border: 1px solid transparent;
-    font-weight: 500;
-}
-
-.nav-tabs .nav-link:hover {
-    color: var(--accent);
+#breadcrumbs {
     background: transparent;
-    border-color: transparent;
-}
-
-.nav-tabs .nav-link.active {
-    background: var(--surface);
-    color: var(--accent);
-    border-color: var(--line) var(--line) #fff;
-}
-
-/* Alerts / messages */
-.alert,
-.dialog {
-    border-radius: 6px;
-    border-width: 1px;
-    box-shadow: none;
-}
-
-.alert-info,
-.dialog.message {
-    background: #f2f6f9;
-    border-color: #d8e3ea;
-    color: #30505c;
-}
-
-.alert-warning,
-.dialog.alert {
-    background: #fbf7ec;
-    border-color: #eadfbc;
-    color: #6e5b2a;
-}
-
-.alert-danger,
-.dialog.error {
-    background: #fbf0ef;
-    border-color: #ebcfca;
-    color: #7b3e36;
-}
-
-.alert-success {
-    background: #eef6f1;
-    border-color: #d6e7db;
-    color: #2f5c43;
-}
-
-/* Links */
-a {
-    color: var(--accent);
-    text-decoration: none;
-}
-
-a:hover,
-a:focus {
-    color: #25584c;
-    text-decoration: underline;
-}
-
-/* Patron and circulation action areas */
-#patron-search,
-#circ_circulation_issue,
-#circ_circulation_return,
-#checkin_search,
-#renewsearch,
-#patronlists,
-#searchheader {
-    background: var(--surface);
-    border: 1px solid var(--line-soft);
-    border-radius: var(--radius);
-    box-shadow: var(--shadow);
-    padding: 14px;
-}
-
-/* Left menu / side blocks if present */
-#menu,
-#navmenu,
-#navmenulist,
-.sidebar,
-.aside {
-    background: transparent;
-}
-
-#navmenu a,
-#menu a {
-    color: var(--text);
-}
-
-#navmenu a:hover,
-#menu a:hover {
-    color: var(--accent);
-}
-
-/* Login page can remain as you already styled it */
-#main_auth body,
-body#main_auth {
-    background: #f4f6f2 !important;
-}
-
-/* Small visual cleanup */
-hr {
-    border-top: 1px solid var(--line-soft);
-}
-
-.well,
-.card,
-div[class*="card"] {
-    background: var(--surface);
-    border: 1px solid var(--line-soft);
-    box-shadow: none;
-    border-radius: var(--radius);
-}
-
-/* Mobile */
-@media (max-width: 768px) {
-    .navbar .nav-link-text {
-        font-size: 13px;
-    }
-
-    h1 {
-        font-size: 1.25rem;
-    }
-
-    .table,
-    table {
-        font-size: 13px;
-    }
+    border: none;
+    font-size: 14px;
+    color: #6b7280;
 }
